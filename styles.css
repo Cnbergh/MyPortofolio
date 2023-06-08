@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.smiley-flower {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.smiley-face {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.menu-text {
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 8px 0;
+}
+
+.landing-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    z-index: 1;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.hero-zoomable-grid-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-zoomable-grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.hero-zoomable-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Fibonacci sizing */
+.box1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.box2 {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.box3 {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+/* Add more styles for other elements according to Fibonacci rules */

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zooming Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="landing-page">
+        <button id="menuButton" class="smiley-flower" onclick="toggleMenu()">
+            <div class="flower">
+                <div class="circle"></div>
+            </div>
+            <span class="menu-text">Menu</span>
+        </button>
+
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <h1>Login</h1>
+        <form class="login-form">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button type="submit">Log in</button>
+        </form>
+        <p>Scroll down</p>
+    </div>
+    <div class="hero-zoomable-grid-inner">
+        <div class="box1 hero-zoomable-grid-item" data-fib="1"><img src="example-image-1.jpg" alt="Example Image 1">
+        </div>
+        <div class="box2 hero-zoomable-grid-item" data-fib="1"><img src="example-image-2.jpg" alt="Example Image 2">
+        </div>
+        <div class="box3 hero-zoomable-grid-item" data-fib="2"><img src="example-image-3.jpg" alt="Example Image 3">
+        </div>
+        <!-- Resten av .hero-zoomable-grid-item elementene her -->
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
