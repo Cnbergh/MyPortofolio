@@ -27,4 +27,4 @@ Each project includes a brief description, and key learning outcomes.
 
 ## Deployment
 
-This project is hosted on GitHub and deployed via Netlify. You can view the live site here: [your-Netlify-site-url]
+This project is hosted on GitHub and deployed via Netlify. You can view the live site here: [https://preeminent-biscochitos-f5813f.netlify.app/]
