@@ -4,45 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zooming Portfolio</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="landing-page">
-        <button id="menuButton" class="smiley-flower" onclick="toggleMenu()">
-            <div class="flower">
-                <div class="circle"></div>
+        <div class="l-landing-page">
+            <div class="l-title">
+                <div class="c-title-top">
+                    <h3>selected work</h3>
+                    <h4>2022/2023</h4>
+                </div>
+
             </div>
-            <span class="menu-text">Menu</span>
-        </button>
+            <header class="l-header">
+                <div class="c-header-title">
+                    <h1>Portfolio</h1>
+                </div>
+            </header>
 
-        <nav id="menu" class="hidden">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+            <nav class="l-navbar">
+                <ul id="menu" class="c-nav">
+                    <li><button class="tablink" onclick="openPage('Home', this, 'var(--color-light-pink)')"
+                            id="defaultOpen">Home</button>
+                    </li>
+                    <li><button class="tablink" onclick="openPage('About', this,'var(--color-beige)')">About
+                            me</button>
+                    </li>
+                    <li><button class="tablink"
+                            onclick="openPage('Portfolio', this, 'var(--color-beige)')">Portfolio</button></li>
+                    <li class="mobile-nav"><button id="menuButton" onclick="toggleMenu()">
+                            <div class="hamburger">
+                                <span class="menu-bar"></span>
+                                <span class="menu-bar"></span>
+                                <span class="menu-bar"></span>
+                            </div>
+                        </button>
+                    </li>
+                    <li><button class="tablink" onclick="openPage('Contact', this, '--color-beige')">Contact</button>
+                    </li>
+                </ul>
+            </nav>
 
-        <h1>Login</h1>
-        <form class="login-form">
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-            <button type="submit">Log in</button>
-        </form>
-        <p>Scroll down</p>
+            <main class=" l-main">
+                <article id="Home" class="c-landing-page tabcontent">
+                    <section id="cnb" class="c-page">CNB</section>
+                </article>
+                <article id="About" class="tabcontent">
+                    <section id="AboutMe" class="c-main">
+                        <div class="c-textbox">
+                            <h1>Who am I</h1>
+                            <p>My name is Christian and I am a front-end student at Noroff.
+                                <br>Having completed my first
+                                year,
+                                I have gained substantial knowledge in UI/UX design, HTML, CSS, and JavaScript.<br> I
+                                find
+                                these
+                                areas extremely fascinating and I am eager to continue learning more, and tackle new
+                                challenges. <br>I am passionate about applying the skills I have learned to practical
+                                problems
+                                and finding innovative solutions.
+                            </p>
+                        </div>
+                        <div class="imgContainer">
+                        </div>
+                    </section>
+                </article>
+                <article id="Portfolio" class="tabcontent">
+                    <section class="portfolio-list">
+                        <div class="project">
+                            <details>
+                                <summary><span class="project-number">NO 1</span> Cross-course project <span
+                                        class="indicator">+</span></summary>
+                                <p class="project-description">RainyDays marked the beginning of my project journey,
+                                    during which I created an online storefront for a brand specializing in outdoor
+                                    jackets for both men and women. The primary goal of the website was to resonate with
+                                    its intended audience, specifically individuals aged between 30 to 50.</p>
+                            </details>
+                        </div>
+                        <div class="project">
+                            <details>
+                                <summary><span class="project-number">NO 2</span> Semester Project 1 <span
+                                        class="indicator">+</span></summary>
+                                <p class="project-description">This was my culminating project for the first semester,
+                                    where I was tasked to design and develop a website for the fictional "Community
+                                    Science Museum". The project was first designed in Figma and subsequently coded
+                                    strictly with HTML and CSS.
+                                    The main focus of the website was to appeal to its target audience, specifically
+                                    family's with children aged between 7 to 15.
+                                </p>
+                            </details>
+                        </div>
+                        <div class="project">
+                            <details>
+                                <summary><span class="project-number">NO 3</span> Project Exam 1 <span
+                                        class="indicator">+</span></summary>
+                                <p class="project-description">This exam presented an opportunity to practically apply
+                                    the skills we'd amassed over our first year of study. The task was to design and
+                                    develop a functional blog site, complete with specific pages and features. The goal
+                                    was not just to test our understanding of the foundational elements but also to
+                                    demonstrate our ability to create a cohesive and user-friendly digital platform.</p>
+                            </details>
+                        </div>
+                    </section>
+                </article>
+                <article id="Contact" class="tabcontent">
+                    <section class="contact-section">
+                        <h2>Contact me</h2>
+                        <p>Phone: <a href="tel:+4745422902">0047 45422902</a></p>
+                        <p>Email: <a href="mailto:Christian.nystad.bergh@gmail.com">Christian.nystad.bergh@gmail.com</a>
+                        </p>
+                    </section>
+                </article>
+                <section class="c-main-bottom">
+                    <div class="c-left">
+                        <h2>Front-End</h2>
+                        <h3>Student @ Noroff</h3>
+                    </div>
+                    <div class="c-right">
+                        <h3>Hello</h3>
+                        <h3>my name is</h3>
+                        <h2>Christian Nystad Bergh</h2>
+                    </div>
+                </section>
+                <footer class="l-footer">
+                    <h3>Scroll down</h3>
+                </footer>
+            </main>
+        </div>
     </div>
+
     <div class="hero-zoomable-grid-inner">
-        <div class="box1 hero-zoomable-grid-item" data-fib="1"><img src="example-image-1.jpg" alt="Example Image 1">
+        <div class="box1 hero-zoomable-grid-item" data-fib="1">
+            <div class="caption">Cross-course project</div>
+            <img src="/assets/RD-img.jpg" alt="Cross-course project" loading="lazy">
         </div>
-        <div class="box2 hero-zoomable-grid-item" data-fib="1"><img src="example-image-2.jpg" alt="Example Image 2">
+        <div class="box2 hero-zoomable-grid-item" data-fib="1">
+            <div class="caption">Semester Project 1</div>
+            <img src="/assets/csm-img.jpg" alt="Semester Project 1" loading="lazy">
         </div>
-        <div class="box3 hero-zoomable-grid-item" data-fib="2"><img src="example-image-3.jpg" alt="Example Image 3">
+        <div class="box3 hero-zoomable-grid-item" data-fib="2">
+            <div class="caption">Project Exam 1</div>
+            <img src="/assets/SM-img.jpg" alt="Project Exam 1" loading="lazy">
         </div>
-        <!-- Resten av .hero-zoomable-grid-item elementene her -->
     </div>
-    <script src="script.js"></script>
+
+    <script defer src="/src/js/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,86 @@
+:root {
+    font-family: var(--ff-primary);
+    line-height: 1.5;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-regular);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    color: var(--color-primary-font);
+}
+
+html {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background-color: var(--color-secondary-background);
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary-background);
+    border: 5px solid var(--color-secondary-border);
+    margin: 0 auto;
+}
+
+body {
+    font-family: inherit;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    background: var(--color-secondary-border);
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+
+body::before {
+    top: 0;
+}
+
+body::after {
+    bottom: 1px;
+}
+
+p,
+h4,
+h3,
+h2,
+h1 {
+    margin: 0;
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+
+    z-index: 1;
+
+    width: 98%;
+    height: 98%;
+    margin-right: 3px;
+
+    background-color: var(--color-secondary-background);
+    border: var(--bw-regular) solid var(--color-primary-border);
+    transition: transform 0.5s, opacity 0.5s;
+}

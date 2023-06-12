@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* Site Variables */
+:root {
+    /* Colors */
+    --color-primary-background: var(--color-light-pink);
+    --color-secondary-background: var(--color-beige);
+
+    --color-primary-font: var(--color-black);
+
+    --color-primary-border: var(--color-pink);
+    --color-secondary-border: var(--color-light-blue);
+
+    --color-primary-shadow: var(--color-dark-black);
+
+    --color-primary-cta: var(--color-pink);
+    --color-secondary-cta: var(--color-light-blue);
+
+    --color-dark-black: #1E1E1E;
+    --color-black: #2C2B2B;
+    --color-dark-blue: #0C4768;
+    --color-light-blue: #96D7CE;
+    --color-red: #F16E52;
+    --color-yellow: #F9B95A;
+    --color-pink: #F7D5E3;
+    --color-light-pink: #FBEDF2;
+    --color-beige: #f9f6f4;
+
+    /* Fonts */
+    --ff-primary: "Bebas Neue";
+
+    /* Font weight */
+    --fw-regular: 400;
+    --fw-medium: 550;
+    --fw-bold: 700;
+
+    /* Font size */
+    --fs-regular: 0.875rem;
+    /* 14px */
+    --fs-s: 0.75rem;
+    /* 12px */
+    --fs-m: 1.125rem;
+    /* 18px */
+    --fs-l: 1.25rem;
+    /* 20px */
+    --fs-xl: 1.5rem;
+    /* 24px */
+    --fs-xxl: 2.5rem;
+    /* 40px */
+
+    /* Border */
+    --bw-regular: 5px;
+}

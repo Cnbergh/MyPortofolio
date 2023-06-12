@@ -2,6 +2,34 @@ const loginPage = document.querySelector(".landing-page");
 const gridItems = document.querySelectorAll(".hero-zoomable-grid-item");
 let zoomedOut = false;
 
+function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+    tablinks[i].classList.remove("active");
+  }
+
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+
+  // Add the 'active' class to the clicked button
+  elmnt.classList.add("active");
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
 function toggleMenu() {
   const menu = document.getElementById("menu");
   menu.classList.toggle("hidden");
@@ -41,3 +69,10 @@ document.body.addEventListener("wheel", (e) => {
     zoomedOut = true;
   }
 });
+
+document.addEventListener("mousemove", parallax);
+function parallax(e) {
+  document.querySelector(".c-landing-page").style.backgroundPosition = `${
+    e.pageX * -0.006
+  }px ${e.pageY * -0.03}px`;
+}

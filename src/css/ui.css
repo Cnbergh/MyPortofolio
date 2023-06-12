@@ -1,0 +1,294 @@
+/**title*/
+.c-title-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    width: 100%;
+    height: 160px;
+}
+
+/*header*/
+.c-header-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.c-header-title h1 {
+    font-size: calc(1vw + 11vh + 1vmin);
+    transform: rotate(-90deg);
+    color: transparent;
+    -webkit-text-stroke: var(--bw-regular) var(--color-secondary-cta);
+}
+
+/*nav*/
+
+.c-nav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.c-nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-right: var(--bw-regular) solid var(--color-primary-border);
+}
+
+.c-nav li:last-child {
+    border-right: none;
+}
+
+.c-nav li button {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: inherit;
+    background-color: transparent;
+    border: none;
+    color: var(--color-primary-font);
+    font-size: var(--fs-m);
+    padding: 0.875rem 1.125rem;
+    width: 100%;
+    height: 100%;
+    border-bottom: var(--bw-regular) solid var(--color-primary-border);
+}
+
+.c-nav li button:hover {
+    background-color: var(--color-primary-cta);
+    transition-duration: 0.4s;
+}
+
+.c-nav li button.active,
+.c-nav li button.active:hover {
+    border-bottom: none;
+}
+
+.c-nav li.mobile-nav {
+    display: none;
+}
+
+/*main*/
+.c-landing-page {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/assets/background_kenrick-mills-unsplash.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.c-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-beige);
+    height: 100%;
+    width: 100%;
+}
+
+#cnb {
+    font-size: calc(11vw + 20vh + 1vmin);
+    color: var(--color-primary-font);
+    background-color: var(--color-primary-cta);
+    mix-blend-mode: screen;
+}
+
+#AboutMe {
+    font-size: calc(var(--fs-regular)+ var(--fs-m) + 1vmin);
+    color: var(--color-primary-font);
+}
+
+.c-main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.c-textbox {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+    height: auto;
+    padding-left: 3%;
+    margin-bottom: auto;
+}
+
+.imgContainer {
+    width: 50%;
+    height: 100%;
+    min-height: 800px;
+    background-color: var(--color-pink);
+    background-image: url('/assets/male-placeholder-image.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.c-textbox h1 {
+    font-size: calc(4vw + 5vh + 1vmin);
+    padding-bottom: 10%;
+}
+
+.c-textbox p {
+    font-size: var(--fs-l);
+    height: 100%;
+    width: 80%;
+    padding-bottom: 10%;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3%;
+    height: 60vh;
+}
+
+.project {
+    padding-bottom: 20%;
+}
+
+.project-description {
+    position: absolute;
+    top: inherit;
+    left: inherit;
+    width: 60%;
+    max-width: 500px;
+    margin: 1% 0;
+    padding: 0 1%;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+    opacity: 0;
+    z-index: 0;
+}
+
+details[open] .project-description {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.project-number {
+    font-size: 1.5em;
+}
+
+.indicator {
+    float: right;
+}
+
+.indicator {
+    transition: transform 0.3s ease;
+}
+
+details[open] .indicator {
+    transform: rotate(140deg);
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    text-align: center;
+}
+
+.contact-section a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.c-main-bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
+    border-top: var(--bw-regular) solid var(--color-primary-border);
+    border-bottom: var(--bw-regular) solid var(--color-primary-border);
+}
+
+.c-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    min-inline-size: 200px;
+    padding: 3%;
+    text-align: right;
+}
+
+.c-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    min-inline-size: 100px;
+    padding: 3%;
+    text-align: left;
+
+    border-right: var(--bw-regular) solid var(--color-primary-border);
+}
+
+/*Zoom*/
+.hero-zoomable-grid-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    background-color: var(--color-beige);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s;
+    padding: 0 1rem;
+}
+
+.hero-zoomable-grid-item img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.box1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.box2 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.box3 {
+    grid-column: span 3;
+    grid-row: span 3;
+}
