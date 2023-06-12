@@ -129,7 +129,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: auto;
+    height: 60vh;
 }
 
 .c-textbox {
@@ -145,7 +145,7 @@
 .imgContainer {
     width: 50%;
     height: 100%;
-    min-height: 800px;
+    min-height: 600px;
     background-color: var(--color-pink);
     background-image: url('/assets/male-placeholder-image.jpeg');
     background-position: center;
